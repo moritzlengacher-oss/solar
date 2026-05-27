@@ -1,0 +1,221 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, CheckCircle2, Code2, Workflow, Database, ShieldCheck, Users, Rocket, Phone, Mail, MapPin } from "lucide-react";
+
+export default function CustomSoftwareLandingpage() {
+  const services = [
+    {
+      icon: <Workflow className="h-7 w-7" />,
+      title: "Prozessautomatisierung",
+      text: "Wiederkehrende Abläufe digitalisieren, manuelle Arbeit reduzieren und interne Prozesse sauber strukturieren."
+    },
+    {
+      icon: <Code2 className="h-7 w-7" />,
+      title: "Individuelle Web- & Softwarelösungen",
+      text: "Massgeschneiderte Tools, Plattformen und interne Systeme statt Standardsoftware mit unnötigen Kompromissen."
+    },
+    {
+      icon: <Database className="h-7 w-7" />,
+      title: "Daten, Schnittstellen & Systeme",
+      text: "CRM, ERP, Website, Formulare, Datenbanken und bestehende Tools sinnvoll miteinander verbinden."
+    },
+    {
+      icon: <ShieldCheck className="h-7 w-7" />,
+      title: "Schweizer KMU-Fokus",
+      text: "Pragmatische Lösungen für Unternehmen, die effizienter arbeiten, wachsen und digital professioneller auftreten wollen."
+    }
+  ];
+
+  const industries = [
+    "Bau & Handwerk",
+    "Immobilien & Verwaltungen",
+    "Dienstleister",
+    "Personalvermittlung & Recruiting",
+    "Solar & Energie",
+    "Treuhand & Beratung"
+  ];
+
+  const steps = [
+    "Analyse der aktuellen Prozesse",
+    "Definition der passenden Softwarelösung",
+    "Umsetzung mit erfahrenen Entwicklungspartnern",
+    "Einführung, Optimierung und laufende Weiterentwicklung"
+  ];
+
+  return (
+    <main className="min-h-screen bg-slate-950 text-white">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(37,99,235,0.35),_transparent_35%),radial-gradient(circle_at_bottom_left,_rgba(14,165,233,0.22),_transparent_30%)]" />
+        <div className="relative mx-auto max-w-7xl px-6 py-8 lg:px-8">
+          <nav className="flex items-center justify-between">
+            <div>
+              <p className="text-lg font-semibold tracking-wide">Lengacher & Partner GmbH</p>
+              <p className="text-sm text-slate-400">Custom Software · Digitalisierung · B2B Solutions</p>
+            </div>
+            <a href="#kontakt" className="hidden rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-950 shadow-lg transition hover:bg-slate-200 md:inline-flex">
+              Erstgespräch buchen
+            </a>
+          </nav>
+
+          <div className="grid items-center gap-12 py-20 lg:grid-cols-2 lg:py-28">
+            <div className="relative flex justify-center lg:justify-end mb-10 lg:mb-0">
+              <img
+                src="/mnt/data/49BA1D7A-DBD2-4B43-B6D5-CCB73AA2C006.jpeg"
+                alt="Moritz Lengacher"
+                className="h-72 w-72 rounded-[2rem] border-4 border-white/10 object-cover shadow-2xl"
+              />
+            </div>
+            <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+              <div className="mb-6 inline-flex rounded-full border border-blue-400/30 bg-blue-400/10 px-4 py-2 text-sm text-blue-200">
+                Für Schweizer KMU, die effizienter arbeiten wollen
+              </div>
+              <h1 className="max-w-4xl text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl">
+                Custom Software, die dein Unternehmen wirklich weiterbringt.
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+                Wir helfen KMU dabei, manuelle Prozesse zu digitalisieren, interne Abläufe zu automatisieren und individuelle Softwarelösungen aufzubauen, die exakt zum Unternehmen passen.
+              </p>
+              <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+                <a href="#kontakt" className="inline-flex items-center justify-center rounded-full bg-blue-500 px-7 py-4 font-semibold text-white shadow-xl shadow-blue-500/20 transition hover:bg-blue-400">
+                  Kostenlose Potenzialanalyse <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+                <a href="#leistungen" className="inline-flex items-center justify-center rounded-full border border-white/15 px-7 py-4 font-semibold text-white transition hover:bg-white/10">
+                  Leistungen ansehen
+                </a>
+              </div>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.15 }} className="rounded-[2rem] border border-white/10 bg-white/10 p-5 shadow-2xl backdrop-blur">
+              <div className="rounded-[1.5rem] bg-slate-900 p-6">
+                <div className="mb-6 flex items-center gap-2">
+                  <div className="h-3 w-3 rounded-full bg-red-400" />
+                  <div className="h-3 w-3 rounded-full bg-yellow-400" />
+                  <div className="h-3 w-3 rounded-full bg-green-400" />
+                </div>
+                <div className="space-y-4">
+                  <div className="rounded-2xl bg-slate-800 p-5">
+                    <p className="text-sm text-slate-400">Problem</p>
+                    <p className="mt-1 text-xl font-semibold">Zu viele manuelle Schritte, Excel-Listen und Insellösungen.</p>
+                  </div>
+                  <div className="rounded-2xl bg-blue-500 p-5">
+                    <p className="text-sm text-blue-100">Lösung</p>
+                    <p className="mt-1 text-xl font-semibold">Ein individuelles System, das Prozesse, Daten und Teams verbindet.</p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="rounded-2xl bg-slate-800 p-5">
+                      <Rocket className="mb-3 h-6 w-6 text-blue-300" />
+                      <p className="font-semibold">Schneller arbeiten</p>
+                    </div>
+                    <div className="rounded-2xl bg-slate-800 p-5">
+                      <Users className="mb-3 h-6 w-6 text-blue-300" />
+                      <p className="font-semibold">Teams entlasten</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      <section id="leistungen" className="bg-white py-24 text-slate-950">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="font-semibold text-blue-600">Unsere Leistungen</p>
+            <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">Keine Software von der Stange. Sondern Lösungen, die zum Betrieb passen.</h2>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {services.map((item) => (
+              <div key={item.title} className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm">
+                <div className="mb-5 inline-flex rounded-2xl bg-blue-100 p-3 text-blue-600">{item.icon}</div>
+                <h3 className="text-xl font-bold">{item.title}</h3>
+                <p className="mt-3 leading-7 text-slate-600">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-100 py-24 text-slate-950">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:px-8">
+          <div>
+            <p className="font-semibold text-blue-600">Typische Anwendungsfälle</p>
+            <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">Wo Custom Software sofort Mehrwert schafft.</h2>
+            <p className="mt-6 text-lg leading-8 text-slate-600">
+              Viele Unternehmen wachsen schneller als ihre internen Systeme. Genau dort setzen wir an: weniger Chaos, klarere Abläufe und bessere Übersicht.
+            </p>
+          </div>
+          <div className="grid gap-4">
+            {[
+              "Interne Dashboards für Vertrieb, Projekte oder Operations",
+              "Automatische Angebots-, Offerten- oder Dokumentenprozesse",
+              "CRM-Workflows, Leadmanagement und Follow-up-Systeme",
+              "Kundenportale, Partnerportale oder interne Mitarbeiterplattformen",
+              "Schnittstellen zwischen Website, Formularen, CRM und Datenbanken"
+            ].map((item) => (
+              <div key={item} className="flex gap-4 rounded-2xl bg-white p-5 shadow-sm">
+                <CheckCircle2 className="mt-1 h-6 w-6 flex-none text-blue-600" />
+                <p className="font-medium text-slate-800">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-24 text-slate-950">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-3">
+            <div className="lg:col-span-1">
+              <p className="font-semibold text-blue-600">Branchenfokus</p>
+              <h2 className="mt-3 text-4xl font-bold tracking-tight">Für KMU mit echten Prozessen.</h2>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:col-span-2">
+              {industries.map((industry) => (
+                <div key={industry} className="rounded-2xl border border-slate-200 p-5 font-semibold shadow-sm">{industry}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-950 py-24 text-white">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="font-semibold text-blue-300">Unser Vorgehen</p>
+            <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">Von der Idee zur funktionierenden Lösung.</h2>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-4">
+            {steps.map((step, index) => (
+              <div key={step} className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-blue-500 font-bold">{index + 1}</div>
+                <p className="text-lg font-semibold">{step}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="kontakt" className="bg-blue-600 py-24 text-white">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2 lg:px-8">
+          <div>
+            <h2 className="text-4xl font-bold tracking-tight md:text-5xl">Lass uns prüfen, wo Software dein Unternehmen entlasten kann.</h2>
+            <p className="mt-6 text-lg leading-8 text-blue-100">
+              In einer kostenlosen Potenzialanalyse schauen wir gemeinsam auf deine aktuellen Prozesse und identifizieren konkrete Möglichkeiten für Digitalisierung, Automatisierung und Custom Software.
+            </p>
+          </div>
+          <div className="rounded-[2rem] bg-white p-8 text-slate-950 shadow-2xl">
+            <h3 className="text-2xl font-bold">Kontakt</h3>
+            <div className="mt-6 space-y-4">
+              <p className="flex items-center gap-3"><Phone className="h-5 w-5 text-blue-600" /> +41 77 265 88 07</p>
+              <p className="flex items-center gap-3"><Mail className="h-5 w-5 text-blue-600" /> moritz@sajinth-partner.ch</p>
+              <p className="flex items-center gap-3"><MapPin className="h-5 w-5 text-blue-600" /> Lengacher & Partner GmbH · Schweiz</p>
+            </div>
+            <a href="mailto:moritz@sajinth-partner.ch?subject=Potenzialanalyse Custom Software" className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-slate-950 px-7 py-4 font-semibold text-white transition hover:bg-slate-800">
+              Potenzialanalyse anfragen <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
